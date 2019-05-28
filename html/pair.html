@@ -36,5 +36,16 @@
         }
       }
     </script>
+    <script>
+      document.querySelector('form').addEventListener('submit', function(event) {
+        event.stopPropogation();
+        event.preventDefault();
+        if (isWebBluetoothEnabled()){
+          ChromeSamples.clearLog();
+          onButtonClick();
+        }
+      });
+    </script>
+        
   </body>
 </html>
