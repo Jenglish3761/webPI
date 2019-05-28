@@ -1,0 +1,126 @@
+/*Apply all*/
+*{
+	font-family: georgia;
+	text-align: center;
+}
+
+
+body.border{
+	display:block;
+	border: 2px solid black;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	font-family: helvetica;
+}
+
+
+#header{
+	display: block;
+	border: 2px solid red;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+.navigation{
+	position: fixed;
+	top: 20px;
+	right: 10%;
+}
+
+.contact-img{
+	height: 50px;
+	width: 50px;
+	
+}
+.proj-img{
+	height: 400px;
+	width: 400px;
+	
+}
+
+h1.myname{
+	
+	font-size: 30px;
+
+}
+
+/* Menu qualities */
+
+ul.centered{
+	text-align: justify;
+	float: center;
+}
+
+li.hmenu{
+	display: inline-block;
+	margin: 10px 20px 10px 20px;
+	text-align: justify;
+	float: center;
+
+}
+
+a:link.menu, a:visited.menu{
+	text-decoration: none;
+	font-weight: 500;
+	color: black;
+}
+
+a:hover.menu{
+	font-weight: 900;
+}
+
+a:active.menu{
+	font-weight: 900;
+	color: red;
+}
+
+/* Dropdown menu */
+
+.dropdown {
+    position: relative;
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 90px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+	
+    display: block;
+}
+p.time{
+	margin-top: 1em;
+	color: red;
+}
+/* IMG qualities */
+
+img.border{
+	margin-left: auto;
+	margin-right: auto;
+	height: 300px;
+	display: block;
+	border: 2px solid black;
+	box-shadow: 10px 10px 5px gray;
+}
+
+figure{
+	border: 1px solid red;
+	border-radius: 25px;
+	margin: 0 auto;
+	padding: 0.5em;
+}
+
+figcaption{
+	font-style: italic;
+	text-align: center;
+	font-size: 90%;
+}
