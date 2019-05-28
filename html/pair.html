@@ -3,12 +3,14 @@
   <head>
     <title>Pair</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script type="text/javascript" src="pair.js"></script>
   </head>
   <body class="border">
     <h1>Pair</h1>
     
     <form>
-      <button>Scan</button>
+      <button onClick="connect()">connect</button>
+      <button onClick="disconnect()">disconnect</button>
     </form>
     
     <h3>Output</h3>
@@ -18,36 +20,7 @@
       <pre id="log"></pre>
     </div>
     
-    <script>
-      async function onButtonClick() {
-        let filters = [];
-        
-        let options = {}
-        options.acceptAllDevices = true;
-        try{
-          log('Requesting Bluetooth Device...');
-          log('with ' + JSON.stringify(options));
-          const device = await navigator.bluetooth.requestDevice(options);
-      
-          log('> Name:      ' + device.name);
-          log('> Id:        ' + device.id);
-          log('> Connected: ' + device.gatt.connected);
-        }catch(error){
-          log('Argh! ' + error);
-        }
-      }
-    </script>
-    <script>
-      document.querySelector('form').addEventListener('submit', function(event) {
-        event.stopPropogation();
-        event.preventDefault();
-        if (isWebBluetoothEnabled()){
-          ChromeSamples.clearLog();
-          onButtonClick();
-        }
-      });
-      
-    </script>
+
     <br/><br/>
     <a target="_blank" href="https://developers.google.com/web/updates/2015/07/interact-with-ble-devices-on-the-web">Doc</a>
     
