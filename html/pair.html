@@ -7,5 +7,34 @@
   <body class="border">
     <h1>Pair</h1>
     
+    <form>
+      <button>Scan</button>
+    </form>
+    
+    <div>
+      <div id="content"></div>
+      <div id="status"></div>
+      <pre id="log"></pre>
+    </div>
+    
+    <script>
+      async function onButtonClick() {
+        let filters = [];
+        
+        let options = {}
+        options.acceptAllDevices = true;
+        try{
+          log('Requesting Bluetooth Device...');
+          log('with ' + JSON.stringify(options));
+          const device = await navigator.bluetooth.requestDevice(options);
+      
+          log('> Name:      ' + device.name);
+          log('> Id:        ' + device.id);
+          log('> Connected: ' + device.gatt.connected);
+        }catch(error){
+          log('Argh! ' + error);
+        }
+      }
+    </script>
   </body>
 </html>
