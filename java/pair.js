@@ -3,7 +3,7 @@ var myService;
 var myCharacterisitc;
 
 function scan(){
-  navigator.bluetooth.requestDevice({acceptAllDevices: true})
+  navigator.bluetooth.requestDevice({acceptAllDevices: true, optionalServices: ['battery_service']})
   .then(function(device){
     myDevice = device;
     console.log(device);
