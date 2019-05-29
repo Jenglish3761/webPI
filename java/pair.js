@@ -12,7 +12,7 @@ function scan(){
   .catch(function(error) {
     // catch any errors:
     console.error('Connection failed!', error);
-  });
+  })};
   
 
 function connect(){
