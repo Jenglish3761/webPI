@@ -2,6 +2,19 @@ var myDevice;
 var myService;
 var myCharacterisitc;
 
+function scan(){
+  navigator.bluetooth.requestDevice({acceptAllDevices: true})
+  .then(function(device){
+    myDevice = device;
+    console.log(device);
+    return device.gatt.connect();
+  })
+  .catch(function(error) {
+    // catch any errors:
+    console.error('Connection failed!', error);
+  });
+  
+
 function connect(){
   navigator.bluetooth.requestDevice({
     // filters: [myFilters]       // you can't use filters and acceptAllDevices together
