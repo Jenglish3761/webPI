@@ -101,6 +101,11 @@ p.time{
 	margin-top: 1em;
 	color: red;
 }
+button{
+	height:50px;
+	width: 100px;
+}
+
 /* IMG qualities */
 
 img.border{
