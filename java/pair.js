@@ -26,8 +26,9 @@ function scan(){
   })
   .catch(function(error) {
     // catch any errors:
-    console.error('Connection failed!', error);
     document.getElementById("log").value=('Connection Issue!  ', error);
+    console.error('Connection failed!', error);
+    
   });
 }
   
