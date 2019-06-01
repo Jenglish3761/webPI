@@ -9,6 +9,7 @@ function scan(){
   })
   .then(function(device){
     myDevice = device;
+    device.addEventListener('gattserverdisconnected', onDisconnected);
     console.log(device);
     return device.gatt.connect(); //connect to selected device
   })
@@ -49,3 +50,7 @@ function disconnect() {
   }
 }
 
+function onDisconnected(event){
+ let device = event.target;
+  console.log('Device ' + device.name + ' is disconnected');
+}
