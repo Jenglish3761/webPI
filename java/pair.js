@@ -3,6 +3,9 @@ var myService = 0x181C; //user data tag
 var myCharacterisitc;
 
 function scan(){
+  if(!navigator.bluetooth.getAvailability()){
+    document.getElementById("status").innerHTML=('bluetooth service unavailable');
+  }
   navigator.bluetooth.requestDevice({
     acceptAllDevices: true, //no filter accept all devices
     optionalServices: [myService] //device serve
