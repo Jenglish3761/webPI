@@ -1,5 +1,5 @@
 var myDevice;
-var myService = 0x181C; //user data tag
+var myService = 0x1800; //generic tag
 var myCharacterisitc;
 
 function scan(){
