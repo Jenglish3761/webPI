@@ -11,6 +11,7 @@ function scan(){
     myDevice = device;
     device.addEventListener('gattserverdisconnected', onDisconnected);
     console.log(device);
+    document.getElementById("status").innerHTML=('Trying to connect to:  ' + device.name);
     return device.gatt.connect(); //connect to selected device
   })
   .then(function(server){
@@ -26,7 +27,7 @@ function scan(){
   })
   .catch(function(error) {
     // catch any errors:
-    document.getElementById("log").innerHTML=('Connection Issue!  ', error);
+    document.getElementById("log").innerHTML=('Connection Issue!  ' + error);
     console.error('Connection failed!', error);
     
   });
