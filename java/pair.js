@@ -19,7 +19,7 @@ function scan(){
     return device.gatt.connect(); //connect to selected device
   })
   .then(function(server){
-    document.getElementById("status").innerHTML=('Connected! Finding Services... ' + service);
+    document.getElementById("status").innerHTML=('Connected! Finding Services... ');
     return server.getPrimaryService(myService);
   })
   .then(function(service){
