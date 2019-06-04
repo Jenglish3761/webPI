@@ -22,6 +22,7 @@ function scan(){
     return server.getPrimaryService(myService);
   })
   .then(function(service){
+    document.getElementById("status").innerHTML=('Connected! Finding Services... ' + service);
     return service.getCharacteristics();
   })
   .then(function(characteristics){
