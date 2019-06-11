@@ -44,6 +44,7 @@ function scan(){
 // subscribe to changes from the meter:
 function subscribeToChanges(characteristic) {
   characteristic.oncharacteristicvaluechanged = handleData;
+  document.getElementById("status").innerHTML=('Connection Success');
 }
 
 // handle incoming data:
