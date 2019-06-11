@@ -68,5 +68,7 @@ function disconnect() {
 
 function onDisconnected(event){
  let device = event.target;
+  document.getElementById("content").innerHTML=('.');
+  document.getElementById("status").innerHTML=(device.name + ' is disconnected');
   console.log('Device ' + device.name + ' is disconnected');
 }
