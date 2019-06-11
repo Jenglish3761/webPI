@@ -27,9 +27,11 @@ function scan(){
     return service.getCharacteristics();
   })
   .then(function(characteristics){
+    document.getElementById("status").innerHTML=('Connected! Finding Characteristics... ');
     for (c in characteristics){
       characteristics[c].startNotifications().then(subscribeToChanges);
     }
+    
   })
   .catch(function(error) {
     // catch any errors:
@@ -49,6 +51,7 @@ function handleData(event) {
   // get the data buffer from the meter:
   var buf = new Uint8Array(event.target.value);
   console.log(buf);
+  document.getElementById("content").innerHTML=(buf);
 }
 
 // disconnect function:
