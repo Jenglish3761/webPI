@@ -30,6 +30,7 @@ function scan(){
     document.getElementById("status").innerHTML=('Connected! Finding Characteristics... ');
     for (c in characteristics){
       characteristics[c].startNotifications().then(subscribeToChanges);
+      console.log(characteristics[c]);
       document.getElementById("status").innerHTML=(characteristics[c]);
     }
     
