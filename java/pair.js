@@ -47,7 +47,7 @@ function scan(){
 function subscribeToChanges(characteristic) {
   characteristic.oncharacteristicvaluechanged = handleData;
   document.getElementById("status").innerHTML=('Connection Success');
-  document.getElementById("content").innerHTML=(device.name + ' is ready');
+  document.getElementById("content").innerHTML=(myDevice.name + ' is ready');
 }
 
 // handle incoming data:
