@@ -27,10 +27,10 @@ function scan(){
     return service.getCharacteristics();
   })
   .then(function(characteristics){
-    
+    document.getElementById("status").innerHTML=('Connected! Finding Characteristics... ');
     for (c in characteristics){
       characteristics[c].startNotifications().then(subscribeToChanges);
-      document.getElementById("status").innerHTML=('Connected! Finding Characteristics... ' + c);
+      document.getElementById("status").innerHTML=(characteristics[c]);
     }
     
   })
