@@ -13,7 +13,7 @@ const inputField = document.getElementById('input');
 
 // Helpers.
 const defaultDeviceName = 'Terminal';
-const terminalAutoScrollingLimit = terminalContainer.offsetHeight / 2;
+const terminalAutoScrollingLimit; //= terminalContainer.offsetHeight / 2;
 let isTerminalAutoScrolling = true;
 
 const scrollElement = (element) => {
