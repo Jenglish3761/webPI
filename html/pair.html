@@ -3,7 +3,9 @@
     <title>Barbell PI-APP</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="icon" href="../img/barbell.jpg">
-    <script type="text/javascript" src="../java/pair.js"></script>
+    <!--<script type="text/javascript" src="../java/pair.js"></script>-->
+    <script src="../java/BluetoothTerminal.js"></script>
+    <script src="../java/main.js"></script>  
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   </head>
   <body class="border">
@@ -14,8 +16,10 @@
     <i>chrome://flags/#enable-experimental-web-platform-features</i>
     <br/><br/>
     
-    <button onClick="scan()">scan</button>
-    
+	<div class="buttons">
+		<button id="Connect">Connect</button>
+		<button id="disconnect">Disconnect</button>
+	</div>
     
     <h2>Output</h2>
     <div>
