@@ -247,6 +247,7 @@ class BluetoothTerminal {
 
     return navigator.bluetooth.requestDevice({
       acceptAllDevices: true,
+      optionalServices: [this.serviceUuid];
       //filters: [{services: [this._serviceUuid]}],
     }).
         then((device) => {
