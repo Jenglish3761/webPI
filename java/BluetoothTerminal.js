@@ -247,7 +247,7 @@ class BluetoothTerminal {
 
     return navigator.bluetooth.requestDevice({
       acceptAllDevices: true,
-      filters: [{services: [this._serviceUuid]}],
+      //filters: [{services: [this._serviceUuid]}],
     }).
         then((device) => {
           this._log('"' + device.name + '" bluetooth device selected');
