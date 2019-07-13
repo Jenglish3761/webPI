@@ -71,14 +71,14 @@ disconnectButton.addEventListener('click', () => {
   deviceNameLabel.textContent = defaultDeviceName;
 });
 
-sendForm.addEventListener('submit', (event) => {
-  event.preventDefault();
+//sendForm.addEventListener('submit', (event) => {
+//  event.preventDefault();
 
-  send(inputField.value);
+//  send(inputField.value);
 
-  inputField.value = '';
-  inputField.focus();
-});
+// inputField.value = '';
+//  inputField.focus();
+//});
 
 // Switch terminal auto scrolling if it scrolls out of bottom.
 terminalContainer.addEventListener('scroll', () => {
