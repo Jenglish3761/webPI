@@ -125,7 +125,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 chart.render();
 	var updateChart= function(){
 		console.log(ot);
-		cosnole.log(t);
+		console.log(t);
 		if (ot != t){
 			dataPoints.push({ x: t, y: za});
 			chart.render();
