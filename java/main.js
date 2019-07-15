@@ -116,8 +116,8 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		//}]
 	},
 	data: [{
-		yValueFormatString: "#,### m/s^2",
-		xValueFormatString: "YYYY",
+		yValueFormatString: "#.### m/s^2",
+		xValueFormatString: "##.#",
 		type: "spline",
 		dataPoints: dataPoints
 	}]
