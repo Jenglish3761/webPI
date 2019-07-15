@@ -100,7 +100,7 @@ terminalContainer.addEventListener('scroll', () => {
 });
 
 window.onload = function () {
-var dataPoints = [{0:0},{1:1}];
+var dataPoints = [{x: 0, y: 0},{x: 1, y:1}];
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,  
 	title:{
@@ -126,7 +126,7 @@ chart.render();
 	var updateChart= function(){
 		
 		if (ot != t){
-			dataPoints.push({ t : za});
+			dataPoints.push({ x: t, y: za});
 			chart.render();
 		}
 		ot = t;
