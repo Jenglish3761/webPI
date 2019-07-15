@@ -27,7 +27,7 @@ const scrollElement = (element) => {
 const logToTerminal = (message, type = '') => {
   terminalContainer.insertAdjacentHTML('beforeend',
       `<div${type && ` class="${type}"`}>${message}</div>`);
-
+  alert(message);
   if (isTerminalAutoScrolling) {
     scrollElement(terminalContainer);
   }
