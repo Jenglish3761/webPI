@@ -100,7 +100,7 @@ terminalContainer.addEventListener('scroll', () => {
 });
 
 window.onload = function () {
-var dataPoints = [{x: 0, y: 0},{x: 1, y:1}];
+var dataPoints = [{x: 0, y: 0}];
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,  
 	title:{
