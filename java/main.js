@@ -11,6 +11,7 @@ const terminalContainer = document.getElementById('terminal');
 const sendForm = document.getElementById('send-form');
 const inputField = document.getElementById('input');
 var t = 0;
+var ot = 0;
 var za = 0;
 // Helpers.
 const defaultDeviceName = 'Terminal';
@@ -123,12 +124,14 @@ var chart = new CanvasJS.Chart("chartContainer", {
 });
 chart.render();
 	var updateChart= function(){
-		var ot = 0;
+		
 		if (ot != t){
 			dataPoints.push({ t : za});
 			chart.render();
 		}
+		ot = t;
 	};
+	
 	setInterval(function(){updateChart()}, 100);
 		
 }
