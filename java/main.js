@@ -10,7 +10,8 @@ const disconnectButton = document.getElementById('disconnect');
 const terminalContainer = document.getElementById('terminal');
 const sendForm = document.getElementById('send-form');
 const inputField = document.getElementById('input');
-
+var t = 0;
+var za = 0;
 // Helpers.
 const defaultDeviceName = 'Terminal';
 const terminalAutoScrollingLimit= terminalContainer.offsetHeight / 2;
@@ -41,8 +42,10 @@ terminal.receive = function(data) {
   logToTerminal(data, 'in');
   //alert(message);
   sm = data.split(",");
-  document.cookie = "t=" + sm[3] + "; z=" + sm[2];
-  console.log(document.cookie);
+	t = sm[3];
+	za = sm[2];
+  //document.cookie = "t=" + sm[3] + "; z=" + sm[2];
+  console.log(za);
   //'data',JSON.stringify({t: sm[3], z: sm[2]}));
   //console.log(JSON.parse(document.cookie('data')));
 };
@@ -106,32 +109,17 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		title: "m/s^2",
 		valueFormatString: "#0,,.",
 		suffix: "",
-		stripLines: [{
-			value: 3366500,
-			label: "Average"
-		}]
+		//stripLines: [{
+		//	value: 3366500,
+		//	label: "Average"
+		//}]
 	},
 	data: [{
-		yValueFormatString: "#,### Units",
+		yValueFormatString: "#,### m/s^2",
 		xValueFormatString: "YYYY",
 		type: "spline",
 		dataPoints: [
-			{x: new Date(2002, 0), y: 2506000},
-			{x: new Date(2003, 0), y: 2798000},
-			{x: new Date(2004, 0), y: 3386000},
-			{x: new Date(2005, 0), y: 6944000},
-			{x: new Date(2006, 0), y: 6026000},
-			{x: new Date(2007, 0), y: 2394000},
-			{x: new Date(2008, 0), y: 1872000},
-			{x: new Date(2009, 0), y: 2140000},
-			{x: new Date(2010, 0), y: 7289000},
-			{x: new Date(2011, 0), y: 4830000},
-			{x: new Date(2012, 0), y: 2009000},
-			{x: new Date(2013, 0), y: 2840000},
-			{x: new Date(2014, 0), y: 2396000},
-			{x: new Date(2015, 0), y: 1613000},
-			{x: new Date(2016, 0), y: 2821000},
-			{x: new Date(2017, 0), y: 2000000}
+			{x: t, y: za}
 		]
 	}]
 });
