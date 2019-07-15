@@ -39,6 +39,12 @@ const terminal = new BluetoothTerminal();
 // Override `receive` method to log incoming data to the terminal.
 terminal.receive = function(data) {
   logToTerminal(data, 'in');
+  //alert(message);
+  sm = data.split(",");
+  document.cookie = "t=" + sm[3] + "; z=" + sm[2];
+  console.log(document.cookie);
+  //'data',JSON.stringify({t: sm[3], z: sm[2]}));
+  //console.log(JSON.parse(document.cookie('data')));
 };
 
 // Override default log method to output messages to the terminal and console.
@@ -47,12 +53,7 @@ terminal._log = function(...messages) {
   messages.forEach((message) => {
     logToTerminal(message);
     console.log(message); // eslint-disable-line no-console
-    //alert(message);
-    sm = message.split(",");
-    document.cookie = "t=" + sm[3] + "; z=" + sm[2];
-    console.log(document.cookie);
-    //'data',JSON.stringify({t: sm[3], z: sm[2]}));
-    //console.log(JSON.parse(document.cookie('data')));
+    
   });
 };
 
