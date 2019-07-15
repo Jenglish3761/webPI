@@ -27,7 +27,7 @@ const scrollElement = (element) => {
 const logToTerminal = (message, type = '') => {
   terminalContainer.insertAdjacentHTML('beforeend',
       `<div${type && ` class="${type}"`}>${message}</div>`);
-  alert(message);
+  
   if (isTerminalAutoScrolling) {
     scrollElement(terminalContainer);
   }
@@ -47,6 +47,7 @@ terminal._log = function(...messages) {
   messages.forEach((message) => {
     logToTerminal(message);
     console.log(message); // eslint-disable-line no-console
+    alert(message);
   });
 };
 
