@@ -99,7 +99,7 @@ terminalContainer.addEventListener('scroll', () => {
 });
 
 window.onload = function () {
-
+var datapoints[{[0,0],[1,1]};
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,  
 	title:{
@@ -118,11 +118,17 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		yValueFormatString: "#,### m/s^2",
 		xValueFormatString: "YYYY",
 		type: "spline",
-		dataPoints: [
-			{x: t, y: za}
-		]
+		dataPoints: dataPoints
 	}]
 });
 chart.render();
-
+	var updateChart= function(){
+		var ot = 0;
+		if (ot != t){
+			dataPoints.push({ t : za});
+			chart.render();
+		}
+	};
+	setInterval(function(){updateChart()}, 100);
+		
 }
