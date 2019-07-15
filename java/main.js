@@ -47,7 +47,10 @@ terminal._log = function(...messages) {
   messages.forEach((message) => {
     logToTerminal(message);
     console.log(message); // eslint-disable-line no-console
-    alert(message);
+    //alert(message);
+    sm = message.split(",");
+    $.cookie('data',JSON.stringify({t: sm[3], z: sm[2]}));
+    console.log(JSON.parse($.cookie('data')));
   });
 };
 
