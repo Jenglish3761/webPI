@@ -42,7 +42,7 @@ terminal.receive = function(data) {
   logToTerminal(data, 'in');
   //alert(message);
   sm = data.split(",");
-	t = sm[3];
+	t = sm[3]/1000;
 	za = sm[2];
   //document.cookie = "t=" + sm[3] + "; z=" + sm[2];
   console.log(za);
