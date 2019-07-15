@@ -49,8 +49,10 @@ terminal._log = function(...messages) {
     console.log(message); // eslint-disable-line no-console
     //alert(message);
     sm = message.split(",");
-    document.cookie('data',JSON.stringify({t: sm[3], z: sm[2]}));
-    console.log(JSON.parse(document.cookie('data')));
+    document.cookie = "t=" + sm[3] + "; z=" + sm[2];
+    console.log(document.cookie);
+    //'data',JSON.stringify({t: sm[3], z: sm[2]}));
+    //console.log(JSON.parse(document.cookie('data')));
   });
 };
 
