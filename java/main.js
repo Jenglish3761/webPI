@@ -129,8 +129,9 @@ chart.render();
 		console.log(ot);
 		console.log(t);
 		console.log(za);
+		var az = za;
 		if (ot != t && t != null){
-			dataPoints.push({y: za});
+			dataPoints.push({x: t, y: az});
 			//chart.data[0].addTo("dataPoints", {x: t, y: za});
 			chart.render();
 			chart.options.title.text = za;
