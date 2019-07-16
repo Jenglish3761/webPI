@@ -130,6 +130,7 @@ chart.render();
 		if (ot != t){
 			dataPoints.push({ x: t, y: za});
 			chart.render();
+			chart.options.title.text = za;
 		}
 		ot = t;
 	};
