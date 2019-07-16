@@ -104,11 +104,11 @@ var dataPoints = [{x: 0, y: 0}];
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,  
 	title:{
-		text: "Y-Acceleration"
+		text: "Z-Acceleration"
 	},
 	axisY: {
 		title: "m/s^2",
-		valueFormatString: "#0.",
+		//valueFormatString: "#0.",
 		suffix: "",
 		//stripLines: [{
 		//	value: 3366500,
@@ -116,8 +116,8 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		//}]
 	},
 	data: [{
-		yValueFormatString: "#.### m/s^2",
-		xValueFormatString: "##.#",
+		//yValueFormatString: "#.### m/s^2",
+		//xValueFormatString: "##.#",
 		type: "spline",
 		dataPoints: dataPoints
 	}]
