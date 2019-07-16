@@ -108,7 +108,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	},
 	axisY: {
 		title: "m/s^2",
-		valueFormatString: "#0,,.",
+		valueFormatString: "#0.",
 		suffix: "",
 		//stripLines: [{
 		//	value: 3366500,
