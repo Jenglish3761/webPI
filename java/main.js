@@ -40,7 +40,7 @@ const terminal = new BluetoothTerminal();
 
 // Override `receive` method to log incoming data to the terminal.
 terminal.receive = function(data) {
-  logToTerminal(data, 'in');
+  //logToTerminal(data, 'in'); //show data in terminal
   //alert(message);
   sm = data.split(",");
 	t = sm[3]/1000;
@@ -135,6 +135,6 @@ chart.render();
 		ot = t;
 	};
 	
-	setInterval(function(){updateChart()}, 100);
+	setInterval(function(){updateChart()}, 50);
 		
 }
