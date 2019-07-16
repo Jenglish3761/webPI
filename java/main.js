@@ -127,7 +127,7 @@ chart.render();
 		console.log(ot);
 		console.log(t);
 		console.log(za);
-		if (ot != t){
+		if (ot != t && t != null){
 			dataPoints.push({ x: t, y: za});
 			//chart.data[0].addTo("dataPoints", {x: t, y: za});
 			chart.render();
