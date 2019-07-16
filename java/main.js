@@ -130,7 +130,7 @@ chart.render();
 		console.log(t);
 		console.log(za);
 		var az = za;
-		if (ot != t && t != null){
+		if (ot != t && t != NaN){
 			dataPoints.push({x: t, y: Number(za)});
 			//chart.data[0].addTo("dataPoints", {x: t, y: za});
 			chart.render();
