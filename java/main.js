@@ -126,6 +126,7 @@ chart.render();
 	var updateChart= function(){
 		console.log(ot);
 		console.log(t);
+		console.log(za);
 		if (ot != t){
 			dataPoints.push({ x: t, y: za});
 			chart.render();
