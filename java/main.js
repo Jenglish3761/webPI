@@ -109,7 +109,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	axisY: {
 		title: "m/s^2",
 		//valueFormatString: "#0.",
-		suffix: "",
+		//suffix: "",
 		//stripLines: [{
 		//	value: 3366500,
 		//	label: "Average"
@@ -128,8 +128,8 @@ chart.render();
 		console.log(t);
 		console.log(za);
 		if (ot != t){
-			//dataPoints.push({ x: t, y: za});
-			chart.data[0].addTo("dataPoints", {x: t, y: za});
+			dataPoints.push({ x: t, y: 1});
+			//chart.data[0].addTo("dataPoints", {x: t, y: za});
 			chart.render();
 			chart.options.title.text = za;
 		}
