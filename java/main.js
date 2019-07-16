@@ -139,6 +139,6 @@ chart.render();
 		ot = t;
 	};
 	
-	setInterval(function(){updateChart()}, 50);
+	setInterval(function(){updateChart()}, 1000);
 		
 }
