@@ -21,4 +21,4 @@ Simply click connect and select your Barbell PI from the list of BLE connections
 * Michael Wright
 
 ## Acknowledgements
-* Danila Loginov (Loginov-Rocks) for recieving BLE uart messages through web-bluetooth terminal
+* Danila Loginov (Loginov-Rocks) for receiving BLE uart messages through web-bluetooth terminal
