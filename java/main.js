@@ -93,9 +93,9 @@ terminalContainer.addEventListener('scroll', () => {
 });
 
 window.onload = function () {
-	var aPoints = [{x: 0, y: 0}];
-	var vPoints = [{x: 0, y: 0}];
-	var pPoints = [{x: 0, y: 0}];
+	var aPoints = [];
+	var vPoints = [];
+	var pPoints = [];
 	var aChart = new CanvasJS.Chart("aChart", {
 		animationEnabled: true,  
 		title:{
