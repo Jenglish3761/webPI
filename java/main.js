@@ -44,7 +44,7 @@ const terminal = new BluetoothTerminal();
 terminal.receive = function(data) {
   //logToTerminal(data, 'in'); //show data in terminal
   sm = data.split(",");
-	t = sm[0]/1000;
+	t = sm[0];
 	za = sm[1];
 	zv = sm[2];
 	zp = sm[3];
