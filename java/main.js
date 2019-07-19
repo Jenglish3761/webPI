@@ -93,7 +93,9 @@ terminalContainer.addEventListener('scroll', () => {
 });
 
 window.onload = function () {
-	var dataPoints = [{x: 0, y: 0}];
+	var aPoints = [{x: 0, y: 0}];
+	var vPoints = [{x: 0, y: 0}];
+	var pPoints = [{x: 0, y: 0}];
 	var aChart = new CanvasJS.Chart("aChart", {
 		animationEnabled: true,  
 		title:{
@@ -105,20 +107,53 @@ window.onload = function () {
 		},
 		data: [{
 			type: "line",
-			dataPoints: dataPoints
+			dataPoints: aPoints
+		}]
+	});
+	var vChart = new CanvasJS.Chart("vChart", {
+		animationEnabled: true,  
+		title:{
+			text: "Z-Velocity"
+		},
+		axisY: {
+			title: "m/s",
+		
+		},
+		data: [{
+			type: "line",
+			dataPoints: vPoints
+		}]
+	});
+	var pChart = new CanvasJS.Chart("pChart", {
+		animationEnabled: true,  
+		title:{
+			text: "Z-Position"
+		},
+		axisY: {
+			title: "m",
+		
+		},
+		data: [{
+			type: "line",
+			dataPoints: pPoints
 		}]
 	});
 	aChart.render();
+	vChart.render();
+	pChart.render();
 	var updateChart= function(){
 		console.log(ot);
 		console.log(t);
 		console.log(za);
-		var az = za;
+		
 		if (ot != t && ot != NaN){
-			dataPoints.push({x: ot, y: Number(za)});
-			//chart.data[0].addTo("dataPoints", {x: t, y: za});
+			aPoints.push({x: ot, y: Number(za)});
+			vPoints.push({x: ot, y: Number(zv)});
+			pPoints.push({x: ot, y: Number(zp)});
 			aChart.render();
-			aChart.options.title.text = za;
+			vChart.render();
+			pChart.render();
+			
 		}
 		ot = t;
 	};
