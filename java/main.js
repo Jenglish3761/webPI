@@ -149,9 +149,9 @@ window.onload = function () {
 		console.log(za);
 		
 		if (ot != t && ot != NaN){
-			aPoints.push({x: ot, y: Number(za)});
-			vPoints.push({x: ot, y: Number(zv)});
-			pPoints.push({x: ot, y: Number(zp)});
+			aPoints.push({x: Number(ot), y: Number(za)});
+			vPoints.push({x: Number(ot), y: Number(zv)});
+			pPoints.push({x: Number(ot), y: Number(zp)});
 			aChart.render();
 			vChart.render();
 			pChart.render();
