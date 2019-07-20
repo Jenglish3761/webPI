@@ -121,7 +121,7 @@ window.onload = function () {
 		},
 		data: [{
 			type: "line",
-			lineColor: "red",
+			
 			dataPoints: vPoints
 		}]
 	});
@@ -136,7 +136,7 @@ window.onload = function () {
 		},
 		data: [{
 			type: "line",
-			lineColor: "green",
+			
 			dataPoints: pPoints
 		}]
 	});
