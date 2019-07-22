@@ -179,24 +179,30 @@ window.onload = function () {
     		cChart.exportChart({format: "jpg"});
 	});  	
 	
+	var updateData= function(){
+		if (ot != NaN){
+			aPoints.push({x: Number(ot), y: Number(za)});
+			vPoints.push({x: Number(ot), y: Number(zv)});
+			pPoints.push({x: Number(ot), y: Number(zp)});
+		}
+		ot = t;
+	}
+	
 	var updateChart= function(){
 		console.log(ot);
 		console.log(t);
 		console.log(za);
 		//ot != t && 
-		if (ot != NaN){
-			aPoints.push({x: Number(ot), y: Number(za)});
-			vPoints.push({x: Number(ot), y: Number(zv)});
-			pPoints.push({x: Number(ot), y: Number(zp)});
+		
 			aChart.render();
 			vChart.render();
 			pChart.render();
 			cChart.render();
 			
-		}
-		ot = t;
+		
+		
 	};
-	
-	setInterval(function(){updateChart()}, 10);
+	setInterval(function(){updateData()},10);
+	setInterval(function(){updateChart()}, 100);
 		
 }
