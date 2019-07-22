@@ -121,7 +121,7 @@ window.onload = function () {
 		},
 		data: [{
 			type: "line",
-			
+			lineColor: "red",
 			dataPoints: vPoints
 		}]
 	});
@@ -136,7 +136,7 @@ window.onload = function () {
 		},
 		data: [{
 			type: "line",
-			
+			lineColor: "green",
 			dataPoints: pPoints
 		}]
 	});
@@ -145,19 +145,27 @@ window.onload = function () {
 		title:{
 			text: "Z Data"
 		},
+		legend:{
+		},
 		axisY: {
-			title: "m",
+			//title: "m",
 		
 		},
 		data: [{
 			type: "line",
+			showInLegend: true,
+      			legendText: "Acc",
 			dataPoints: aPoints
 		},{
 			type: "line",
+			showInLegend: true,
+      			legendText: "Vel",
 			lineColor: "red",
 			dataPoints: vPoints
 		},{
 			type: "line",
+			showInLegend: true,
+      			legendText: "Pos",
 			lineColor: "green",
 			dataPoints: pPoints
 		}
