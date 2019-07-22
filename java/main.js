@@ -168,7 +168,7 @@ window.onload = function () {
 	pChart.render();
 	cChart.render();
 	document.getElementById("saveChart").addEventListener("click",function(){
-    		chart.exportChart({format: "jpg"});
+    		cChart.exportChart({format: "jpg"});
 	});  	
 	
 	var updateChart= function(){
