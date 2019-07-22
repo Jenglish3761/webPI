@@ -183,8 +183,8 @@ window.onload = function () {
 		console.log(ot);
 		console.log(t);
 		console.log(za);
-		
-		if (ot != t && ot != NaN){
+		//ot != t && 
+		if (ot != NaN){
 			aPoints.push({x: Number(ot), y: Number(za)});
 			vPoints.push({x: Number(ot), y: Number(zv)});
 			pPoints.push({x: Number(ot), y: Number(zp)});
