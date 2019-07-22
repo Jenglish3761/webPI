@@ -140,9 +140,37 @@ window.onload = function () {
 			dataPoints: pPoints
 		}]
 	});
+	var cChart = new CanvasJS.Chart("cChart", {
+		animationEnabled: true,  
+		title:{
+			text: "Z Data"
+		},
+		axisY: {
+			title: "m",
+		
+		},
+		data: [{
+			type: "line",
+			dataPoints: aPoints
+		},{
+			type: "line",
+			lineColor: "red",
+			dataPoints: vPoints
+		},{
+			type: "line",
+			lineColor: "green",
+			dataPoints: pPoints
+		}
+		      ]
+	});
 	aChart.render();
 	vChart.render();
 	pChart.render();
+	cChart.render();
+	document.getElementById("saveChart").addEventListener("click",function(){
+    		chart.exportChart({format: "jpg"});
+	});  	
+	
 	var updateChart= function(){
 		console.log(ot);
 		console.log(t);
@@ -155,6 +183,7 @@ window.onload = function () {
 			aChart.render();
 			vChart.render();
 			pChart.render();
+			cChart.render();
 			
 		}
 		ot = t;
