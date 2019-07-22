@@ -197,6 +197,6 @@ window.onload = function () {
 		ot = t;
 	};
 	
-	setInterval(function(){updateChart()}, 100);
+	setInterval(function(){updateChart()}, 50);
 		
 }
